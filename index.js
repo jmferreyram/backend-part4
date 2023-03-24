@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require('express')
 const app = express()
 
@@ -81,4 +82,12 @@ app.get('/api/notes/:id', (request, response) => {
 const PORT = 3001
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
+=======
+const app = require('./app')
+const config = require('./utils/config')
+const logger = require('./utils/logger')
+
+app.listen(config.PORT, () => {
+  logger.info(`Server running on port ${config.PORT}`)
+>>>>>>> 09a0f4bbf7afca2ef4612d03dfaf1f153ec2e390
 })
